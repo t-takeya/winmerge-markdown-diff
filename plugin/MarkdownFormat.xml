@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugins>
+  <plugin name="MarkdownFormat">
+    <event value="FILE_PACK_UNPACK" />
+    <description value="Compare Markdown after formatting with Prettier. Original files are not changed during comparison." />
+    <file-filters value="\.md$;\.markdown$;\.mdown$;\.mkd$" />
+    <is-automatic value="false" />
+    <unpacked-file-extension value=".md" />
+    <extended-properties value="ProcessType=Prettification;MenuCaption=Format Markdown" />
+    <unpack-file>
+      <command>"__NODE_EXE__" "${WINMERGE_HOME}\Commands\MarkdownFormat\src\format.mjs" "${SRC_FILE}" "${DST_FILE}"</command>
+    </unpack-file>
+  </plugin>
+</plugins>

@@ -1,0 +1,13 @@
+{
+  "name": "winmerge-markdown-diff",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WinMerge unpacker for formatted Markdown comparison",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test",
+    "build": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/Build.ps1"
+  },
+  "dependencies": { "prettier": "3.9.9" }
+}
